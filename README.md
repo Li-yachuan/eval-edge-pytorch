@@ -52,10 +52,15 @@ Then the folder structure should be:
 		:
 ```
 
+### 2. 
+Download the project and unzip the GT in the folder `.\GT`. They are available at [here](https://drive.google.com/drive/folders/1j1TU28PinKipOh0egf8tbzI7EetAbzKh?usp=sharing)
 
-### 2.eval
 
-####2.1  The simplest eval
+
+
+### 3.eval
+
+####3.1  The simplest eval
 just use  
 ``` shell
 python eval.py [input dir] -d [dataset name]  -f
@@ -71,7 +76,7 @@ you can eval the result of BSDS500 in dir `\result`
 
 For higher automation, we implement automatic detection of folders with simple cycle. We use the `T` and `limit` parameters to control the sleep time and total wait time for the folder traversal, the default of which is 0.5 hours and 8 hours.
 
-####2.2 No constant monitoring
+####3.2 No constant monitoring
 If you only need to eval existing results, you can use `notwait` to cancel the automatic check and keep waiting, as follows:
 
 
@@ -79,7 +84,7 @@ If you only need to eval existing results, you can use `notwait` to cancel the a
 python eval.py \result -d BSDS -nw -f
 ```
 
-####2.3 Default dataset
+####3.3 Default dataset
 
 If you can include the dataset name in the path under eval, then you don't have to specify the dataset individually:
 
@@ -88,7 +93,7 @@ If you can include the dataset name in the path under eval, then you don't have 
 python eval.py \result\bsds-result -nw -f
 ```
 
-####2.4 multiple paths
+####3.4 multiple paths
 
 You can specify multiple paths to eval multiple sets of results at the same time.You need to place multiple paths inside the "", separated by Spaces. There is no support for evaling multiple datasets at the same time, so multiple results should be on the same dataset.		
 
@@ -96,7 +101,7 @@ You can specify multiple paths to eval multiple sets of results at the same time
 python eval.py "\result\bsds-result \result\bsds-result2" -nw -f
 ```
 
-####2.5 light version & full version
+####3.5 light version & full version
 
 Evaluation of edge detection is known to be a very time-consuming process, in extreme cases even slower than training, such as on densely labeled datasets like BIPED.
 
@@ -115,7 +120,7 @@ python eval.py "\result\bsds-result \result\bsds-result2" -nw -f
 
 The light version is faster, but the accuracy will be about 0.5% lower than the full version, but the relative accuracy will not change, so we can use the light version to pick the best result, and then use the full version to get its true accuracy.
 
-####2.6 show result
+####3.6 show result
 
  
 To see the results better, use the following command.
