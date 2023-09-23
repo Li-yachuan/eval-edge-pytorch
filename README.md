@@ -53,7 +53,7 @@ Then the folder structure should be:
 ```
 
 ### 2. Download GT
-Download the project and unzip the GT in the folder `.\GT`. They are available at [here](https://drive.google.com/drive/folders/1j1TU28PinKipOh0egf8tbzI7EetAbzKh?usp=sharing)
+Download the project and unzip the GT in the folder `.\GT`. They are available [here](https://drive.google.com/drive/folders/1j1TU28PinKipOh0egf8tbzI7EetAbzKh?usp=sharing)
 
 
 
